@@ -98,6 +98,30 @@ const slideNext = function () {
   updateSliderPos();
 };
 
+const marquee = document.getElementById("npk-marquee");
+let lastScrollPosition = 0;
+let marqueeHidden = false;
+
+window.addEventListener("scroll", () => {
+  const currentScrollPosition = window.scrollY;
+  const scrollThreshold = 200; // adjust this value to change the scroll position threshold
+
+  if (
+    currentScrollPosition < scrollThreshold &&
+    lastScrollPosition > scrollThreshold
+  ) {
+    // scrolling up, show marquee
+    marquee.classList.remove("marquee-hidden");
+    marqueeHidden = false;
+  } else if (currentScrollPosition > scrollThreshold && !marqueeHidden) {
+    // scrolling down, hide marquee
+    marquee.classList.add("marquee-hidden");
+    marqueeHidden = true;
+  }
+
+  lastScrollPosition = currentScrollPosition;
+});
+
 heroSliderNextBtn.addEventListener("click", slideNext);
 
 const slidePrev = function () {

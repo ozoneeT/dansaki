@@ -693,6 +693,20 @@ body.nav-active {
   transition: var(--transition-1);
 }
 
+.marquee {
+  position: fixed;
+
+  width: 100%;
+  background-color: rgba(10, 53, 10, 0.377);
+  box-sizing: border-box;
+  z-index: 1000;
+  transition: top 0.5s ease-in-out;
+}
+
+.marquee-hidden {
+  top: -100px;
+}
+
 .header.active {
   padding-block: 20px;
   background-color: var(--eerie-black-4);
