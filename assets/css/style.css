@@ -1626,8 +1626,8 @@ textarea.input-field {
 
 .back-top-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 100px;
+  right: 30px;
   background-color: var(--gold-crayola);
   color: var(--smoky-black-1);
   font-size: 22px;
