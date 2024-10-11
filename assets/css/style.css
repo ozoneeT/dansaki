@@ -699,7 +699,7 @@ body.nav-active {
   width: 100%;
   background-color: rgba(10, 53, 10, 0.377);
   box-sizing: border-box;
-  z-index: 1000;
+  z-index: 100;
   transition: top 0.5s ease-in-out;
 }
 
@@ -769,7 +769,7 @@ body.nav-active {
   padding-block-end: 50px;
   overflow-y: auto;
   visibility: hidden;
-  z-index: 2;
+  z-index: 1000;
   transition: var(--transition-2);
 }
 
